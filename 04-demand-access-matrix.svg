@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="300" viewBox="0 0 680 300" role="img">
+<title>Demand access matrix by confidentiality level</title>
+<desc>Matrix of who can access a Demand record at each confidentiality level. Rows are persona groups; columns are Public, Confidential and Strictly Confidential. Green R/W means full read and write; amber Read with an asterisk means read-only with sensitive fields, related lists and work notes hidden; grey dash means no access.</desc>
+<style>
+ text{font-family:Aptos,'Segoe UI',Arial,sans-serif;}
+ .title{font-size:15px;font-weight:600;fill:#E97132;}
+ .t{font-size:14px;fill:#16161D;}
+ .ts{font-size:12px;fill:#5A6B7B;}
+ .th{font-size:14px;font-weight:600;fill:#0E2841;}
+ .c-green rect{fill:#E1EFE3;stroke:#2E7D46;stroke-width:1;} .c-green text{fill:#1E5631;}
+ .c-amber rect{fill:#FBE7D4;stroke:#C67A2E;stroke-width:1;} .c-amber text{fill:#8A5216;}
+ .c-gray rect{fill:#ECEEF0;stroke:#B7BEC6;stroke-width:1;} .c-gray text{fill:#6B7480;}
+</style>
+<text class="title" x="40" y="26">Demand — access &amp; field visibility</text>
+<text class="ts" x="40" y="44">R/W = read + write · Read* = read-only · — = no access</text>
+<text class="ts" x="40" y="60">Read* hides sensitive fields, related lists and work notes</text>
+<text class="th" x="44" y="86">Persona group</text>
+<text class="th" x="356" y="86" text-anchor="middle">Public</text>
+<text class="th" x="469" y="86" text-anchor="middle">Confidential</text>
+<text class="th" x="583" y="86" text-anchor="middle">Strictly conf.</text>
+<line x1="40" y1="92" x2="640" y2="92" stroke="#C9CFD6" stroke-width="1"/>
+<text class="th" x="44" y="115">Privileged</text><text class="ts" x="44" y="131">admin, creator, managers, collaborators</text>
+<g class="c-green"><rect x="304" y="100" width="105" height="34" rx="6"/><text class="t" x="356" y="121" text-anchor="middle" fill="#1E5631">R / W</text></g>
+<g class="c-green"><rect x="417" y="100" width="105" height="34" rx="6"/><text class="t" x="469" y="121" text-anchor="middle" fill="#1E5631">R / W</text></g>
+<g class="c-green"><rect x="530" y="100" width="106" height="34" rx="6"/><text class="t" x="583" y="121" text-anchor="middle" fill="#1E5631">R / W</text></g>
+<text class="th" x="44" y="161">SPM Demand Approver</text><text class="ts" x="44" y="177">same Business Area</text>
+<g class="c-amber"><rect x="304" y="146" width="105" height="34" rx="6"/><text class="t" x="356" y="167" text-anchor="middle" fill="#8A5216">Read*</text></g>
+<g class="c-amber"><rect x="417" y="146" width="105" height="34" rx="6"/><text class="t" x="469" y="167" text-anchor="middle" fill="#8A5216">Read*</text></g>
+<g class="c-amber"><rect x="530" y="146" width="106" height="34" rx="6"/><text class="t" x="583" y="167" text-anchor="middle" fill="#8A5216">Read*</text></g>
+<text class="th" x="44" y="207">Same Business Area</text><text class="ts" x="44" y="223">non-privileged roles</text>
+<g class="c-amber"><rect x="304" y="192" width="105" height="34" rx="6"/><text class="t" x="356" y="213" text-anchor="middle" fill="#8A5216">Read*</text></g>
+<g class="c-amber"><rect x="417" y="192" width="105" height="34" rx="6"/><text class="t" x="469" y="213" text-anchor="middle" fill="#8A5216">Read*</text></g>
+<g class="c-gray"><rect x="530" y="192" width="106" height="34" rx="6"/><text class="t" x="583" y="213" text-anchor="middle" fill="#6B7480">—</text></g>
+<text class="th" x="44" y="253">Other users</text><text class="ts" x="44" y="269">different Business Area</text>
+<g class="c-amber"><rect x="304" y="238" width="105" height="34" rx="6"/><text class="t" x="356" y="259" text-anchor="middle" fill="#8A5216">Read*</text></g>
+<g class="c-gray"><rect x="417" y="238" width="105" height="34" rx="6"/><text class="t" x="469" y="259" text-anchor="middle" fill="#6B7480">—</text></g>
+<g class="c-gray"><rect x="530" y="238" width="106" height="34" rx="6"/><text class="t" x="583" y="259" text-anchor="middle" fill="#6B7480">—</text></g>
+</svg>

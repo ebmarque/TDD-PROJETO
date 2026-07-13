@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="500" viewBox="0 0 680 500" role="img">
+<title>Confidentiality and access model for a Demand record</title>
+<desc>Decision flow for how SPMUtils.evaluateConfidentiality grants or denies access to a Demand: privileged users and collaborators are always granted; other users must be in the same Business Area, and for strictly confidential records must additionally belong to the Approver group. Projects are stricter.</desc>
+<style>
+ text{font-family:Aptos,'Segoe UI',Arial,sans-serif;}
+ .title{font-size:15px;font-weight:600;fill:#E97132;}
+ .t{font-size:14px;fill:#16161D;}
+ .ts{font-size:12px;fill:#5A6B7B;}
+ .th{font-size:14px;font-weight:600;fill:#0E2841;}
+ rect.box{fill:#EAEEF2;stroke:#0E2841;stroke-width:1;}
+ .c-green rect{fill:#E1EFE3;stroke:#2E7D46;stroke-width:1;} .c-green text{fill:#1E5631;}
+ .c-red rect{fill:#F7E3E3;stroke:#C0392B;stroke-width:1;} .c-red text{fill:#922B21;}
+</style>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#45566A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<text class="title" x="40" y="28">Confidentiality &amp; access — Demand record</text>
+<text class="ts" x="40" y="48">Decision logic of SPMUtils.evaluateConfidentiality · green = granted · red = denied</text>
+<g><rect class="box" x="90" y="76" width="320" height="44" rx="8"/><text class="th" x="106" y="97">Privileged user or collaborator?</text><text class="ts" x="106" y="113">Admin · Creator · Demand/Project Manager</text></g>
+<g><rect class="box" x="90" y="170" width="320" height="44" rx="8"/><text class="th" x="106" y="191">Same Business Area as the record?</text><text class="ts" x="106" y="207">User's company belongs to the record's BA</text></g>
+<g><rect class="box" x="90" y="264" width="320" height="44" rx="8"/><text class="th" x="106" y="285">Strictly confidential level?</text><text class="ts" x="106" y="301">Highest of the three confidentiality levels</text></g>
+<g><rect class="box" x="90" y="358" width="320" height="44" rx="8"/><text class="th" x="106" y="379">Member of the Approver group?</text><text class="ts" x="106" y="395">SPM Demand Approver</text></g>
+<line x1="250" y1="120" x2="250" y2="168" stroke="#45566A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="ts" x="258" y="147">No</text>
+<line x1="250" y1="214" x2="250" y2="262" stroke="#45566A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="ts" x="258" y="241">Yes</text>
+<line x1="250" y1="308" x2="250" y2="356" stroke="#45566A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="ts" x="258" y="335">Yes</text>
+<line x1="410" y1="98" x2="470" y2="98" stroke="#45566A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="ts" x="420" y="91">Yes</text>
+<g class="c-green"><rect x="478" y="80" width="150" height="40" rx="8"/><text class="th" x="553" y="104" text-anchor="middle" fill="#1E5631">Access granted</text></g>
+<line x1="410" y1="192" x2="470" y2="192" stroke="#45566A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="ts" x="420" y="185">No</text>
+<g class="c-red"><rect x="478" y="174" width="150" height="40" rx="8"/><text class="th" x="553" y="198" text-anchor="middle" fill="#922B21">Access denied</text></g>
+<line x1="410" y1="286" x2="470" y2="286" stroke="#45566A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="ts" x="420" y="279">No</text>
+<g class="c-green"><rect x="478" y="268" width="150" height="40" rx="8"/><text class="th" x="553" y="292" text-anchor="middle" fill="#1E5631">Access granted</text></g>
+<line x1="410" y1="380" x2="470" y2="380" stroke="#45566A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="ts" x="420" y="373">Yes</text>
+<g class="c-green"><rect x="478" y="362" width="150" height="40" rx="8"/><text class="th" x="553" y="386" text-anchor="middle" fill="#1E5631">Access granted</text></g>
+<line x1="250" y1="402" x2="250" y2="430" stroke="#45566A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="ts" x="258" y="420">No</text>
+<g class="c-red"><rect x="150" y="432" width="200" height="40" rx="8"/><text class="th" x="250" y="456" text-anchor="middle" fill="#922B21">Access denied</text></g>
+<g><rect class="box" x="410" y="430" width="228" height="52" rx="8"/><text class="th" x="424" y="450">Projects are stricter</text><text class="ts" x="424" y="468">Admin, PM &amp; collaborators only</text></g>
+</svg>
